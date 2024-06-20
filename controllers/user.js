@@ -2,7 +2,7 @@ const { promisify } = require('util');
 const crypto = require('crypto');
 const nodemailer = require('nodemailer');
 const passport = require('passport');
-const _ = require('lodash');
+const _ = require('lodash');    // lodash 
 const validator = require('validator');
 const mailChecker = require('mailchecker');
 const User = require('../models/User');
@@ -22,7 +22,7 @@ const sendMail = (settings) => {
       pass: process.env.SMTP_PASSWORD
     }
   };
-
+  
   let transporter = nodemailer.createTransport(transportConfig);
 
   return transporter.sendMail(settings.mailOptions)
